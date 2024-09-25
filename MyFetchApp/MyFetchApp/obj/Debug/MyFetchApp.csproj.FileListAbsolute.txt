@@ -1,0 +1,10 @@
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\bin\Debug\MyFetchApp.exe.config
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\bin\Debug\MyFetchApp.exe
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\bin\Debug\MyFetchApp.pdb
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\bin\Debug\Newtonsoft.Json.dll
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\bin\Debug\Newtonsoft.Json.xml
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\obj\Debug\MyFetchApp.csproj.AssemblyReference.cache
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\obj\Debug\MyFetchApp.csproj.CoreCompileInputs.cache
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\obj\Debug\MyFetchApp.csproj.Up2Date
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\obj\Debug\MyFetchApp.exe
+C:\Dev\API_Fetch_CSharp\MyFetchApp\MyFetchApp\obj\Debug\MyFetchApp.pdb
