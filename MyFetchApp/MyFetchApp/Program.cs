@@ -34,7 +34,7 @@ class Program
 
         while (true)
         {
-            Console.Write("Введіть ім'я або команду (displaydb/cleardb/exit): ");
+            Console.Write("Enter name or command (displaydb/cleardb/exit): ");
             string input = Console.ReadLine();
 
             if (string.IsNullOrEmpty(input)) continue;
@@ -85,19 +85,19 @@ class Program
             {
                 string response = await client.GetStringAsync(apiUrl);
                 var result = JsonConvert.DeserializeObject<NationalizeResponse>(response);
-                Console.WriteLine($"Ім'я: {result.name} | Кількість співпадінь: {result.count}");
+                Console.WriteLine($"Name: {result.name} | Matches: {result.count}");
 
                 foreach (var country in result.country)
                 {
-                    Console.WriteLine($"Країна: {country.country_id}, Імовірність: {country.probability}");
+                    Console.WriteLine($"Country: {country.country_id}, Probability: {country.probability}");
                     SaveToDatabase(result.name, country.country_id, country.probability);
                 }
-                Console.WriteLine("Відповідь записана до БД");
+                Console.WriteLine("Request recorded to DB");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                Console.WriteLine($"Помилка запиту: {ex.Message}");
+                Console.WriteLine($"Request error: {ex.Message}");
             }
         }
     }
@@ -131,7 +131,7 @@ class Program
             using (OleDbCommand countCommand = new OleDbCommand(countQuery, connection))
             {
                 int recordCount = (int)countCommand.ExecuteScalar();
-                Console.WriteLine($"Кількість записів у БД ({recordCount})");
+                Console.WriteLine($"DB records count: ({recordCount})");
             }
 
             // Отримати та відобразити всі записи з таблиці
@@ -142,7 +142,7 @@ class Program
                 {
                     while (reader.Read())
                     {
-                        Console.WriteLine($"ID: {reader["Id"]} | Ім'я: {reader["personName"]} | Країна: {reader["Country"]} | Імовірність: {reader["Probability"]}");
+                        Console.WriteLine($"ID: {reader["Id"]} | Name: {reader["personName"]} | Country: {reader["Country"]} | Probability: {reader["Probability"]}");
                     }
                 }
             }
@@ -162,7 +162,7 @@ class Program
             {
                 command.ExecuteNonQuery();
             }
-            Console.WriteLine("База даних очищена.");
+            Console.WriteLine("DB cleared.");
             Console.WriteLine();
         }
     }
